@@ -4,7 +4,7 @@ public class YourSchedule {
     public static void main(String[] args) {
         String[] course = {"English III", "Precalculus", "Music Theory", "Biotechnology",
                             "Principles of Technology I", "Latin II", "AP US History",
-                            "Business Computer Infomation Systems"};
+                            "Business Computer Information Systems"};
         String[] teacher = {"Ms. Lapan", "Mrs. Gideon", "Mr. Davis", "Ms. Palmer",
                             "Ms. Garcia", "Mrs. Barnett", "Ms. Johannessen", "Mr. James"};
 
