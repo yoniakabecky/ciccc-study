@@ -13,7 +13,7 @@ public class Player {
     private List player = new ArrayList();
     private int playerSum;
     private boolean hitOrStand = true;
-    private boolean blast = false;
+    private boolean bust = false;
 
     public Player(DeckOfCards allCards, Cards myCard) {
         this.dCards = allCards;
@@ -50,16 +50,16 @@ public class Player {
         this.hitOrStand = true;
     }
 
-    public boolean isBlast() {
-        return blast;
+    public boolean isBust() {
+        return bust;
     }
 
-    public void setBlast() {
-        this.blast = true;
+    public void setBust() {
+        this.bust = true;
     }
 
     public void hitOrStand() {
-        while (!isBlast() && isHitOrStand()) {
+        while (!isBust() && isHitOrStand()) {
             System.out.print("Hit(h) or Stand(s): ");
             String userInput = scanner.next();
             System.out.println();
@@ -81,7 +81,7 @@ public class Player {
             System.out.println("Player\n" + getPlayer() + " : " + getPlayerSum() + "\n");
         }
         if (getPlayerSum() > 21) {
-            setBlast();
+            setBust();
         }
     }
 }

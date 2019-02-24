@@ -13,7 +13,7 @@ public class TwentyOne {
         dCards.setCardOfDeck();
 
 
-        // 1. dealt two cards for player(both up) and dealer(one up)
+        // 1. give two cards for player(both face up) and dealer(one face up)
         p1.setPlayer();
         d1.setDealer();
         System.out.println("Dealer\n" + d1.getDealer() + "\n");
@@ -26,16 +26,16 @@ public class TwentyOne {
         p1.hitOrStand();
 
 
-        // 3. dealer: get cards until equal or over 17
-        if (!p1.isBlast()) {
+        // 3. dealer: draw cards until equal or over 17
+        if (!p1.isBust()) {
             d1.moreCards();
         }
 
         // 4. check which is winner
-        if (p1.isBlast()) {
-            System.out.println("BLAST!!\nYOU LOSE....");
-        } else if (d1.isBlast()) {
-            System.out.println("Dealer's blast!!\nYOU WIN!!");
+        if (p1.isBust()) {
+            System.out.println("BUST!!\nYOU LOSE....");
+        } else if (d1.isBust()) {
+            System.out.println("The dealer dose bust!!\nYOU WIN!!");
         } else if (p1.getPlayerSum() > d1.getDealerSum()) {
             System.out.println("YOU WIN!!");
         } else if (p1.getPlayerSum() < d1.getDealerSum()) {

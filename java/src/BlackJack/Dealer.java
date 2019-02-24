@@ -10,7 +10,7 @@ public class Dealer {
 
     private List dealer = new ArrayList();
     private int dealerSum;
-    private boolean blast = false;
+    private boolean bust = false;
 
     public Dealer(DeckOfCards allCards, Cards myCard) {
         this.dCards = allCards;
@@ -39,12 +39,12 @@ public class Dealer {
         this.dealerSum += aCard.getPoints();
     }
 
-    public boolean isBlast() {
-        return blast;
+    public boolean isBust() {
+        return bust;
     }
 
-    public void setBlast() {
-        this.blast = true;
+    public void setBust() {
+        this.bust = true;
     }
 
     public void moreCards() {
@@ -54,7 +54,7 @@ public class Dealer {
         }
         System.out.println("Dealer\n" + getDealer() + " : " + getDealerSum() + "\n");
         if (getDealerSum() > 21) {
-            setBlast();
+            setBust();
         }
     }
 
