@@ -59,12 +59,11 @@ public class Cards {
         int point = oneToThirteen(aCard);
         if (point == 1) {
             this.points = 11;
-        } else if (point >= 11) {
+        } else if (point >= 10) {
             this.points = 10;
         } else {
             this.points = point;
         }
-        this.points = points;
     }
 
     private int oneToThirteen(String aCard) {

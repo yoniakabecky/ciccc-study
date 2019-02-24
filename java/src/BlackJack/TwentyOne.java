@@ -22,8 +22,12 @@ public class TwentyOne {
         System.out.println("Player\n" + p1.getPlayer() + " : " + p1.getPlayerSum() + "\n");
 
 
-        // 2. player: hit or stand. If blast, dealer win
-        p1.hitOrStand();
+        // 2. player: hit or stand. If blackjack skip, if bust dealer win
+        if (p1.isBj()) {
+            System.out.println("Black Jack!!!\n");
+        } else {
+            p1.hitOrStand();
+        }
 
 
         // 3. dealer: draw cards until equal or over 17

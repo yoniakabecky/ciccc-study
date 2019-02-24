@@ -14,6 +14,9 @@ public class Player {
     private int playerSum;
     private boolean hitOrStand = true;
     private boolean bust = false;
+    private boolean ace = false;
+    private boolean faceCard = false;
+    private boolean bj = false;
 
     public Player(DeckOfCards allCards, Cards myCard) {
         this.dCards = allCards;
@@ -30,6 +33,7 @@ public class Player {
         aCard.setNumber(dCards.getaCard());
         this.player.add(aCard.getMarks() + aCard.getNumbers());
         setPlayerSum();
+        setBj();
         dCards.removeACard();
     }
 
@@ -39,15 +43,21 @@ public class Player {
 
     public void setPlayerSum() {
         aCard.setPoints(dCards.getaCard());
-        this.playerSum += aCard.getPoints();
+        if (this.ace && aCard.getPoints() == 11) {
+            this.playerSum += 1;
+        } else {
+            if (aCard.getPoints() == 1 || aCard.getPoints() == 11) {
+                this.ace = true;
+            }
+            if (aCard.getPoints() == 10) {
+                this.faceCard = true;
+            }
+            this.playerSum += aCard.getPoints();
+        }
     }
 
     public boolean isHitOrStand() {
         return hitOrStand;
-    }
-
-    public void setHitOrStand() {
-        this.hitOrStand = true;
     }
 
     public boolean isBust() {
@@ -56,6 +66,16 @@ public class Player {
 
     public void setBust() {
         this.bust = true;
+    }
+
+    public void setBj() {
+        if (this.ace && this.faceCard) {
+            this.bj = true;
+        }
+    }
+
+    public boolean isBj() {
+        return bj;
     }
 
     public void hitOrStand() {
@@ -84,4 +104,5 @@ public class Player {
             setBust();
         }
     }
+
 }

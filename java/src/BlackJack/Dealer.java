@@ -50,7 +50,6 @@ public class Dealer {
     public void moreCards() {
         while (getDealerSum() < 17) {
             setDealer();
-            setDealerSum();
         }
         System.out.println("Dealer\n" + getDealer() + " : " + getDealerSum() + "\n");
         if (getDealerSum() > 21) {
