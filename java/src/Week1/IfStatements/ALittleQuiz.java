@@ -11,15 +11,14 @@ public class ALittleQuiz {
 
         if (start.equals("Y")) {
             System.out.println("Okay, here it comes!");
-            int correct = 0;
-            playGame(correct);
-            System.out.println("\nOverall, you got " + correct + " out of 3 correct.");
+            System.out.println("\nOverall, you got " + playGame() + " out of 3 correct.");
         }
         System.out.println("Thanks for playing!");
     }
 
-    public static int playGame(int correct) {
+    public static int playGame() {
         Scanner scanner = new Scanner(System.in);
+        int correct = 0;
 
         // Quiz 1
         System.out.println("Q1) What is the capital of Alaska?\n" +
