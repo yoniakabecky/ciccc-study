@@ -43,7 +43,7 @@ public class TwentyOne {
         } else if (p1.getPlayerSum() > d1.getDealerSum()) {
             System.out.println("YOU WIN!!");
         } else if (p1.getPlayerSum() < d1.getDealerSum()) {
-            System.out.println("YOU LOSE!!");
+            System.out.println("YOU LOSE....");
         } else {
             System.out.println("EVEN");
         }
