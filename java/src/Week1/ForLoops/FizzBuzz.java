@@ -1,32 +1,20 @@
 package Week1.ForLoops;
 
-import java.util.Random;
-
 public class FizzBuzz {
     public static void main(String[] args) {
-        Random random = new Random();
+        for (int i = 1; i <= 100; i++) {
+            boolean fizz = false;
+            boolean buzz = false;
+            String result = "";
 
-        int myCard1 = random.nextInt(10) + 1;
-        int myCard2 = random.nextInt(10) + 1;
-        int dCard1 = random.nextInt(10) + 1;
-        int dCard2 = random.nextInt(10) + 1;
-        int myTotal = myCard1 + myCard2;
-        int dTotal = dCard1 + dCard2;
+            if (i % 3 == 0) fizz = true;
+            if (i % 5 == 0) buzz = true;
 
-        System.out.println("Baby Blackjack!");
+            if (fizz) result = result + "Fizz";
+            if (buzz) result = result + "Buzz";
+            if (!fizz && !buzz) result = Integer.toString(i);
 
-        System.out.printf("\nYou drew %d and %d.\n", myCard1, myCard2);
-        System.out.printf("Your total is %d.\n", myTotal);
-
-        System.out.printf("\nThe dealer has %d and %d.\n", dCard1, dCard2);
-        System.out.printf("Dealer's total is %d.\n", dTotal);
-
-        if (myTotal > dTotal) {
-            System.out.println("\nYOU WIN!");
-        } else if (myTotal < dTotal) {
-            System.out.println("\nYOU LOSE!");
-        } else {
-            System.out.println("\nDRAW!");
+            System.out.println(result);
         }
     }
 }
