@@ -98,12 +98,9 @@ public class Province {
 
     // returns a String in the format
     public String getDetails() {
-        String capitalName = getCapital();
-        String provinceName = getName();
-        int population = getPopulationInMillions();
-
-        return "The capital of " +provinceName+
-                " (pop. " +population+ " million) is " +capitalName+ ".";
+        return "The capital of " +getName()+
+                " (pop. " +getPopulationInMillions()+
+                " million) is " +getCapital()+ ".";
 
     }
 }

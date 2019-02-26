@@ -1,7 +1,5 @@
 package Lab2;
 
-import java.util.Arrays;
-
 public class Country {
 
     String countryName;
