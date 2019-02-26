@@ -4,6 +4,9 @@ public class Province {
     private String name;
     private String capital;
     private int populationInMillions;
+    private static final String DEFAULT_PROVINCE = "British Columbia";
+    private static final String DEFAULT_CAPITAL = "Victoria";
+    private static final int DEFAULT_POPULATION_MILLIONS = 4;
 
     // constructor: take three parameters
     public Province(String name, String capital, int populationInMillions) {
@@ -12,9 +15,10 @@ public class Province {
             this.name = name;
             this.capital = capital;
         } else {
-            this.populationInMillions = 4;
-            this.name = "British Columbia";
-            this.capital = "Victoria";
+            this.populationInMillions = DEFAULT_POPULATION_MILLIONS;
+            this.name = DEFAULT_CAPITAL;
+            this.capital = DEFAULT_PROVINCE;
+
         }
     }
 
