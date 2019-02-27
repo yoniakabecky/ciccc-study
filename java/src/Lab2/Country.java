@@ -2,15 +2,17 @@ package Lab2;
 
 public class Country {
 
-    String countryName;
-    Province[] provinces;
+    // instance variables
+    private String countryName;
+    private Province[] provinces;
 
     // default constructor:
     // creates an Array of ten Province objects,
     // to match Canada’s real provinces
     public Country() {
-        countryName = "Canada";
-        provinces = new Province[] {new Province("Ontario", "Toronto", 13),
+        this.countryName = "Canada";
+        this.provinces = new Province[] {
+                new Province("Ontario", "Toronto", 13),
                 new Province("Quebec", "Quebec City", 8),
                 new Province("Nova Scotia", "Halifax", 1),
                 new Province("New Brunswick", "Fredericton", 1),
@@ -19,7 +21,8 @@ public class Country {
                 new Province("Prince Edward Island", "Charlottetown", 0),
                 new Province("Saskatchewan", "Regina", 1),
                 new Province("Alberta", "Edmonton", 4),
-                new Province("Newfoundland and Labrador", "St. John's", 1)};
+                new Province("Newfoundland and Labrador", "St. John's", 1)
+        };
 
     }
 
@@ -46,10 +49,11 @@ public class Country {
         return count;
     }
 
+
     public static void main(String[] args) {
         Country c = new Country();
         c.displayAllProvinces();
-        System.out.println(c.howManyHaveThisPopulation(5,20));
+        System.out.println(c.howManyHaveThisPopulation(5, 20));
     }
 
 }

@@ -1,14 +1,17 @@
 package Lab2;
 
 public class Province {
+    /* Instance variables */
     private String name;
     private String capital;
     private int populationInMillions;
+
+    /* Constants */
     private static final String DEFAULT_PROVINCE = "British Columbia";
     private static final String DEFAULT_CAPITAL = "Victoria";
     private static final int DEFAULT_POPULATION_MILLIONS = 4;
 
-    // constructor: take three parameters
+    /* constructor: take three parameters */
     public Province(String name, String capital, int populationInMillions) {
         if ((isValidPopulation(populationInMillions)) && (isValidProvince(name) && (isValidCapitalCity(capital)))) {
             this.populationInMillions = populationInMillions;
@@ -59,10 +62,11 @@ public class Province {
     // and returns true if the String parameter exists in that Array;
     // otherwise it returns false. Use while-loop
     private boolean isValidProvince(String province) {
-        String[] provinceNames = {"Ontario", "Quebec", "Nova Scotia",
-                        "New Brunswick", "Manitoba", "British Columbia",
-                        "Prince Edward Island", "Saskatchewan",
-                        "Alberta", "Newfoundland and Labrador"};
+        String[] provinceNames = {
+                "Ontario", "Quebec", "Nova Scotia", "New Brunswick",
+                "Manitoba", "British Columbia", "Prince Edward Island",
+                "Saskatchewan", "Alberta", "Newfoundland and Labrador"
+        };
 
         int i = 0;
         while (i < provinceNames.length) {
@@ -78,9 +82,11 @@ public class Province {
     // and returns true if the String parameter exists in that Array;
     // otherwise it returns false. Use for-loop
     private boolean isValidCapitalCity(String capital) {
-        String[] capitalNames = {"Toronto", "Quebec City", "Halifax",
-                        "Fredericton", "Winnipeg", "Victoria",
-                        "Charlottetown", "Regina", "Edmonton", "St. John's"};
+        String[] capitalNames = {
+                "Toronto", "Quebec City", "Halifax", "Fredericton",
+                "Winnipeg", "Victoria", "Charlottetown", "Regina",
+                "Edmonton", "St. John's"
+        };
 
         for (int i = 0; i < capitalNames.length; i++) {
             if (capitalNames[i] == capital) {
