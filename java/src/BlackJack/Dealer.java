@@ -1,19 +1,19 @@
 package BlackJack;
 
+class Dealer extends Person{
 
-public class Dealer extends Person{
-
-    public Dealer(DeckOfCards allCards, Card myCard) {
+    Dealer(DeckOfCards allCards, Card myCard) {
         super(allCards, myCard);
     }
 
-    public void moreCards() {
+
+    void drawMoreCards() {
         while (getValueOfAHand() < 17) {
-            setPerson();
+            drawACard();
         }
-        System.out.println("Dealer\n" + getPerson() + " : " + getValueOfAHand() + "\n");
+        System.out.println("Dealer\n" + getTheDrawnCard() + " : " + getValueOfAHand() + "\n");
         if (getValueOfAHand() > 21) {
-            setIsBust();
+            setBust();
         }
     }
 }

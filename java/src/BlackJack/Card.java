@@ -1,61 +1,61 @@
 package BlackJack;
 
-import java.util.List;
+class Card {
 
-public class Cards {
-
-    private String marks;
-    private String numbers;
+    private String suits;
+    private String ranks;
     private int points;
 
-    public Cards() {
+
+    Card() {
     }
 
-    public String getMarks() {
-        return marks;
+
+    String getSuits() {
+        return suits;
     }
 
-    public String getNumbers() {
-        return numbers;
+    String getRanks() {
+        return ranks;
     }
 
-    public int getPoints() {
+    int getPoints() {
         return points;
     }
 
-    public void setMarks(String aCard) {
+    void setSuits(String aCard) {
         int intCard = Integer.parseInt(aCard);
         if (intCard <= 13) {
             // \u2660: spades
-            this.marks = "\u2660";
-        } else if (intCard >= 14 && intCard <= 26) {
+            this.suits = "\u2660";
+        } else if (intCard <= 26) {
             // \u2665: hearts
-            this.marks = "\u2665";
-        } else if (intCard >= 27 && intCard <= 39) {
+            this.suits = "\u2665";
+        } else if (intCard <= 39) {
             // \u2666: diamonds
-            this.marks = "\u2666";
-        } else if (intCard >= 40 && intCard <= 52) {
+            this.suits = "\u2666";
+        } else if (intCard <= 52) {
             // \u2663: clubs
-            this.marks = "\u2663";
+            this.suits = "\u2663";
         }
     }
 
-    public void setNumber(String aCard) {
+    void setRanks(String aCard) {
         int num = oneToThirteen(aCard);
         if (num == 1) {
-            this.numbers = "A";
+            this.ranks = "A";
         } else if (num == 11) {
-            this.numbers = "J";
+            this.ranks = "J";
         } else if (num == 12) {
-            this.numbers = "Q";
+            this.ranks = "Q";
         } else if (num == 13) {
-            this.numbers = "K";
+            this.ranks = "K";
         } else {
-            this.numbers = num + "";
+            this.ranks = num + "";
         }
     }
 
-    public void setPoints(String aCard) {
+    void setPoints(String aCard) {
         int point = oneToThirteen(aCard);
         if (point == 1) {
             this.points = 11;

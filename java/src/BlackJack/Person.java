@@ -3,49 +3,77 @@ package BlackJack;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Person {
-    DeckOfCards dCards;
-    Card aCard;
+class Person {
+
+    private DeckOfCards dCards;
+    private Card aCard;
 
     private List person = new ArrayList();
     private int valueOfAHand;
-    private boolean isBust;
-    private boolean isBJ;
+    private boolean isBust = false;
+    private boolean isBJ = false;
+    private boolean ace = false;
+    private boolean faceCard = false;
+    private int countAces = 0;
 
-    public Person(DeckOfCards allCards, Card myCard) {
+
+    Person(DeckOfCards allCards, Card myCard) {
         this.dCards = allCards;
         this.aCard = myCard;
     }
 
-    public List getPerson() {
+
+    List getTheDrawnCard() {
         return person;
     }
 
-    public void setPerson() {
-        dCards.setaCard();
-        aCard.setMarks(dCards.getaCard());
-        aCard.setNumber(dCards.getaCard());
-        this.person.add(aCard.getMarks() + aCard.getNumbers());
+    void drawACard() {
+        dCards.setACard();
+        aCard.setSuits(dCards.getACard());
+        aCard.setRanks(dCards.getACard());
+        this.person.add(aCard.getSuits() + aCard.getRanks());
         setValueOfAHand();
-        dCards.removeACard();
+        setBJ();
     }
 
-    public int getValueOfAHand() {
+    int getValueOfAHand() {
         return valueOfAHand;
     }
 
-    public void setValueOfAHand() {
-        aCard.setPoints(dCards.getaCard());
+    private void setValueOfAHand() {
+        aCard.setPoints(dCards.getACard());
+        if (aCard.getPoints() == 10) {
+            this.faceCard = true;
+        }
+        if (aCard.getPoints() == 11) {
+            this.ace = true;
+            this.countAces++;
+        }
         this.valueOfAHand += aCard.getPoints();
+
+        if (this.ace && this.valueOfAHand > 21) {
+            if (this.countAces != 0) {
+                this.valueOfAHand -= 10;
+                countAces--;
+            }
+        }
     }
 
-    public boolean isBust() {
+    boolean isBust() {
         return isBust;
     }
 
-    public void setIsBust() {
-        this.isBust = true;
+    void setBust() {
+        isBust = true;
     }
 
+    boolean isBJ() {
+        return isBJ;
+    }
 
+    private void setBJ() {
+        if (this.ace && this.faceCard) {
+            isBJ = true;
+        }
+    }
 }

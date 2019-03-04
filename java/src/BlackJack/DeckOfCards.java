@@ -4,24 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DeckOfCards {
+class DeckOfCards {
 
     private List deckOfCards;
     private String aCard;
 
-    public DeckOfCards() {
+
+    DeckOfCards() {
 
     }
 
-    public List getCardOfDeck() {
-        return deckOfCards;
-    }
 
-    public String getaCard() {
-        return aCard;
-    }
-
-    public void setCardOfDeck() {
+    void setCardOfDeck() {
         List allCards = new ArrayList();
         for (int i = 0; i < 52; i++) {
             allCards.add(i + 1);
@@ -31,11 +25,12 @@ public class DeckOfCards {
         this.deckOfCards = allCards;
     }
 
-    public void setaCard() {
-        this.aCard = deckOfCards.get(0).toString();
+    String getACard() {
+        return aCard;
     }
 
-    public void removeACard() {
+    void setACard() {
+        this.aCard = deckOfCards.get(0).toString();
         deckOfCards.remove(0);
     }
 }
