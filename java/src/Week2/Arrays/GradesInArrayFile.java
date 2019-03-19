@@ -1,7 +1,6 @@
 package Week2.Arrays;
 
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
@@ -20,11 +19,11 @@ public class GradesInArrayFile {
         System.out.print("Filename: ");
         String fileName = sc.nextLine();
 
+        System.out.println("\nHere are your randomly-selected grades (hope you pass):");
+
         try {
             PrintWriter pw = new PrintWriter(fileName);
             pw.println(userName);
-
-            System.out.println("\nHere are your randomly-selected grades (hope you pass):");
             for (int i = 0; i < grades.length; i++) {
                 grades[i] = rd.nextInt(100) + 1;
                 System.out.printf("Grade %d: %d\n", i, grades[i]);
