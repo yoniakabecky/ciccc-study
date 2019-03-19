@@ -1,4 +1,4 @@
 # testing gitignore
 
-java/src/MiniProject1/
-java/out/
+src/MiniProject1/
+out/
