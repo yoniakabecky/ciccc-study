@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML&CSS</title>
+    <style>
+        table, th, td {
+            border: solid 1px black;
+            border-collapse: collapse;
+            text-align: center;
+            width: 750px;
+        }
+        thead {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Inline</th>
+                <th>Internal</th>
+                <th>External</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;h1 style=" "&gt;</td>
+                <td>&lt;style&gt;&lt;/style&gt;</td>
+                <td>&lt;link rer=" "&gt;</td>
+            </tr>
+            <tr>
+                <td colspan="2">Inside HTML</td>
+                <td>Outside HTML</td>
+            </tr>
+            <tr>
+                <td>Most Powerful</td>
+                <td>Resides in &lt;head&gt;</td>
+                <td>Separate HTML</td>
+            </tr>
+            <tr>
+                <td colspan="2">Remark 1</td>
+                <td rowspan="2">Remark 3</td>
+            </tr>
+            <tr>
+                <td colspan="2">Remark 2</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
