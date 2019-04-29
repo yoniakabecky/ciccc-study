@@ -57,6 +57,7 @@ header img {
     width: 320px;
     height: auto;
     border: 5px solid #fff;
+    box-shadow: 3px 3px 3px 0px #aaa;
 }
 
 #services {
@@ -94,6 +95,7 @@ header img {
     width: 180px;
     height: 180px;
     border: 3px solid #fff;
+    box-shadow: 1px 1px 1px 1px #000;
 
 }
 
