@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro:600');
+
+html, body {
+    margin: 0;
+    font-family: 'Bitter', serif;
+}
+
+body {
+    background-image: url("../Resources/back.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646; 
+}
+
+.head-logo {
+    position: relative;
+    animation-name: bounce;
+    animation-duration: 2000ms;
+    -webkit-animation-name: bounce;    
+    -webkit-animation-duration: 2000ms;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+}
+
+.sub-title h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 1.5em;
+    opacity: 0;
+    animation: spacing 2000ms 2000ms forwards;
+    -webkit-animation: spacing 2000ms 2000ms forwards;
+}
+
+.main-menu ul {
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 5vw 0 5vw;
+}
+
+.main-menu li {
+    margin-left: 1em;
+    margin-right: 1em;
+    opacity: 0;
+    animation: fade-in 3000ms 2000ms forwards;
+    -webkit-animation: fade-in 3000ms 2000ms forwards;
+}
+
+.main-menu li:hover {
+    animation-fill-mode: none;
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+}
+
+.main-menu a {
+    color: #fff;
+    font-weight: semi-bold;
+    text-decoration: none;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bounce {
+    0%   { transform: translateY(-250px); }
+    50%  { transform: translateY(100px); }
+}
+@-webkit-keyframes fade-in {
+    0%   { opacity: 0;}
+    100% { opacity: .7;}
+}
+@-webkit-keyframes spacing {
+    0%   { opacity: .7; letter-spacing: 0;}
+    100% { opacity: .7; letter-spacing: 2vw;}
+}
+
+/* Standard syntax */
+@keyframes bounce {
+    0%   { transform: translateY(-250px); }
+    50%  { transform: translateY(100px); }
+}
+@keyframes fade-in {
+    0%   { opacity: 0;}
+    100% { opacity: .7;}
+}
+@keyframes spacing {
+    0%   { opacity: 0; letter-spacing: 0;}
+    100% { opacity: .7; letter-spacing: 2vw;}
+}
