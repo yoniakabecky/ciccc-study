@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Final exam</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="tab">
+      <button class="tabLink" onclick="openTab(this,'signUp')">Sign Up</button>
+      <button class="tabLink" onclick="openTab(this,'logIn')">Log In</button>
+    </div>
+    <div id="signUp" class="tabContent">
+      <!-- form -->
+      <div id="form">
+        <form name="myForm">
+          <table width="100%" cellpadding="3" cellspacing="2">
+            <tr>
+              <td align="right">First Name</td>
+              <td>
+                <input type="text" name="fName" style="width:60%;">
+                <div id="fNameDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">Last Name</td>
+              <td>
+                <input type="text" name="lName" style="width:60%;">
+                <div id="lNameDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">E-Mail</td>
+              <td>
+                <input type="text" name="email" style="width: 60%">
+                <div id="emailDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right">City</td>
+              <td><input type="text" name="City" style="width: 60%">
+                <div id="cityDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right">Zip Code</td>
+              <td>
+                <input type="text" name="Zip" style="width: 60%">
+                <div id="ZipDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right">Username</td>
+              <td>
+                <input type="text" name="Username" style="width: 60%">
+                <div id="usernameDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="right">Password</td>
+              <td><input type="password" name="Password" autocomplete="off" style="width: 60%" />
+                <div id="passwordDiv" class="errorMsg"></div>
+                <progress max="100" value="0" id="meter"></progress>
+              </td>
+            </tr>
+            <tr>
+              <td align="right">ConfirmPassword</td>
+              <td><input type="password" name="ConfirmPassword" style="width: 60%" />
+                <div id="confirmPassDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+            <tr>
+              <td align="right"></td>
+              <td>
+                <input type="button" value="Submit" onclick="validate()" />
+                <div id="validateDiv" class="errorMsg"></div>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+    <div id="logIn" class="tabContent">
+      <button class="btn">click for nothing</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

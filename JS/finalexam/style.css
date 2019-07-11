@@ -1,0 +1,70 @@
+body{
+  background-color: rgb(248, 195, 186);
+}
+
+#container {
+}
+
+
+/* tab */
+#tab {
+  overflow: hidden;
+  /* border: 1px solid #ccc; */
+  background-color: #eee; 
+}
+
+.tabLink {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabLink:hover {
+  background-color: #ccc;
+}
+
+.tabContent {
+  display: none;
+  min-height: 80vh;
+  padding: 6px 12px;
+  border-top: none;
+  background-color: #ccc;
+}
+
+
+/* form */
+#signUp {
+  padding: 50px;
+}
+
+.errorMsg {
+	color: red; 
+	font-size: 10px;
+	min-height: 10px;
+} 
+
+/* button */
+#logIn {
+  position: relative;
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 200px;
+	text-align: center;
+	font-size: 20px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	text-decoration: none;
+	background-color: white;
+}
+
