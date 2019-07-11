@@ -1,4 +1,4 @@
-#Directions
+Directions
 
 Build a website with these components for each section with vanilla javascript.
 1. Design a Tab component
