@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <input type="checkbox" id="show-menu">
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About &#8595</a>
+                <ul class="hidden">
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">What We Do</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Courses &#8595</a>
+                <ul class="hidden">
+                    <li><a href="#">Intro to Computing</a></li>
+                    <li><a href="#">Algorithms and Flowchart</a></li>
+                    <li><a href="#">Java Development</a></li>
+                </ul>
+            </li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div style="clear:both;"></div>
+
+    <main>
+        <div class="outer">
+            <div class="inner" id="box1">
+                <img src="./resources/one.png" alt="android image" class="image">
+                <div class="description">
+                    <p>Good Programming Practices call attention to techniques that will help you produce programs that are clearer, more understandable and more maintainable.</p>
+                </div>
+            </div>
+            <div class="inner" id="box2">
+                <img src="./resources/two.png" alt="mobile image" class="image">
+                <div class="description">
+                    <p>Error-Prevention Tips contain suggestions for exposing bugs and removing them from your programs; many describe aspects of programming that prevent bugs from getting into programs in the first place.</p>
+                </div>
+            </div>
+            <div class="inner" id="box3">
+                <img src="./resources/three.png" alt="computer image" class="image">
+                <div class="description">
+                    <p>Common Programming Errors point out the errors that students tend to make frequently. These Common Programming Errors reduce the likelihood that you'll make the same mistakes.</p>
+                </div>
+            </div>
+            <div class="inner" id="box4">
+                <img src="./resources/four.png" alt="android image" class="image">
+                <div class="description">
+                    <p>Software Engineering Observations highlight architectural and design issues that affect the construction of software systems, especially large-scale systems.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
