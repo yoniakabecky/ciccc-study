@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import AddTodo from "./component/AddTodo";
+import PrintTodo from "./component/PrintTodo";
+import SortTodo from "./component/SortTodo";
+import "./App.css";
+
+class App extends React.Component {
+  state = {
+    todoList: []
+  }
+
+  addNewTask = (newTask) => {
+    let currentList = this.state.todoList;
+    currentList.push({
+      task: newTask,
+      isDone: false
+    })
+
+    this.setState({
+      todoList: currentList
+    })
+  }
+
+  onClickList = (index) => {
+    let currentList = this.state.todoList;
+
+    currentList[index] = {
+      ...currentList[index],
+      isDone: !currentList[index].isDone
+    }
+
+    this.setState({
+      todoList: currentList
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <AddTodo handleInputValue={this.addNewTask} />
+        <SortTodo />
+        <PrintTodo todoLists={this.state.todoList} onClickList={this.onClickList} />
+      </div>
+    );
+  }
 }
 
 export default App;
