@@ -20,7 +20,7 @@ class PrintTodo extends React.Component {
       }
     }
 
-    let filteredList = todoLists.filter(renderFilter);
+    let filteredList = todoLists.filter(switchFilter);
 
     return (
       <ul className="list">
