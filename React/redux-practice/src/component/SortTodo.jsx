@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 class SortTodo extends React.Component {
 
@@ -10,9 +11,9 @@ class SortTodo extends React.Component {
   render() {
     return (
       <div>
-        <button name="all" onClick={this.clickHandle}>All</button>
-        <button name="done" onClick={this.clickHandle}>Done</button>
-        <button name="notDone" onClick={this.clickHandle}>Not Yet</button>
+        <button name="all" className="btn" onClick={this.clickHandle}>All</button>
+        <button name="done" className="btn" onClick={this.clickHandle}>Done</button>
+        <button name="notDone" className="btn" onClick={this.clickHandle}>Not Yet</button>
       </div>
     )
   }
