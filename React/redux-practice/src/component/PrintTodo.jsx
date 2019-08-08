@@ -2,10 +2,28 @@ import React from "react";
 
 class PrintTodo extends React.Component {
   render() {
-    const { todoLists, onClickList } = this.props;
+    const { todoLists, onClickList, displayFilter } = this.props;
+
+    let renderFilter = (todoList) => {
+      switch (displayFilter) {
+        case 'all':
+          return true;
+        case 'done':
+          if (todoList.isDone) return true;
+          break;
+        case 'notDone':
+          if (!todoList.isDone) return true;
+          break;
+        default:
+          return false;
+      }
+    }
+
+    let filteredList = todoLists.filter(renderFilter);
+
     return (
       <ul>
-        {todoLists.map((todoList, index) =>
+        {filteredList.map((todoList, index) =>
           <li
             key={index}
             style={{ textDecoration: todoList.isDone ? "line-through" : "unset" }}

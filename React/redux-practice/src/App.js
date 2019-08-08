@@ -7,7 +7,8 @@ import "./App.css";
 
 class App extends React.Component {
   state = {
-    todoList: []
+    todoList: [],
+    filterType: 'all'
   }
 
   addNewTask = (newTask) => {
@@ -19,6 +20,12 @@ class App extends React.Component {
 
     this.setState({
       todoList: currentList
+    })
+  }
+
+  setFilter = (filterType) => {
+    this.setState({
+      filterType: filterType
     })
   }
 
@@ -39,8 +46,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <AddTodo handleInputValue={this.addNewTask} />
-        <SortTodo />
-        <PrintTodo todoLists={this.state.todoList} onClickList={this.onClickList} />
+        <SortTodo displayFilter={this.setFilter} />
+        <PrintTodo todoLists={this.state.todoList} displayFilter={this.state.filterType} onClickList={this.onClickList} />
       </div>
     );
   }
