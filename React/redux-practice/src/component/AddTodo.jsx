@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 class AddTodo extends React.Component {
   state = {
@@ -24,11 +25,12 @@ class AddTodo extends React.Component {
       <form>
         <input
           type="text"
+          className="taskInput"
           value={this.state.newTask}
           onChange={this.handleInput}
           placeholder="Add a task here"
         />
-        <button onClick={this.handleClick}>+</button>
+        <button className="addBtn" onClick={this.handleClick}>+</button>
       </form>
     );
   }

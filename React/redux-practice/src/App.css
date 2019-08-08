@@ -1,33 +1,52 @@
+body {
+  background-color: #eee;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 10%;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  border-radius: 5px;
+  margin: 5px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.taskInput {
+  border-radius: 5px;
+  font-size: 16px;
+  height: 30px;
+  width: 180px;
+  
+}
+
+.addBtn {
+  border: none;
+  color: tomato;
+  background-color: transparent;
+  font-size: 28px;
+}
+
+.list {
+  list-style: none;
+  list-style-position: inside;
+  font-size: 28px;
+  padding-left: 0;
+  width: 100%;
+}
+
+.list li {
+  padding: 5px;
+}
+
+.list li:nth-child(even) {
+  background-color: #aaa;
 }

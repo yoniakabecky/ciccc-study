@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 
 class PrintTodo extends React.Component {
   render() {
@@ -22,7 +23,7 @@ class PrintTodo extends React.Component {
     let filteredList = todoLists.filter(renderFilter);
 
     return (
-      <ul>
+      <ul className="list">
         {filteredList.map((todoList, index) =>
           <li
             key={index}
