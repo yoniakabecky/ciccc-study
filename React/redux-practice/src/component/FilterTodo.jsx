@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-class SortTodo extends React.Component {
+class FilterTodo extends React.Component {
 
   clickHandle = (event) => {
     this.props.displayFilter(event.target.name);
@@ -19,4 +19,4 @@ class SortTodo extends React.Component {
   }
 }
 
-export default SortTodo;
+export default FilterTodo;

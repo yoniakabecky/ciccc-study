@@ -5,7 +5,7 @@ class PrintTodo extends React.Component {
   render() {
     const { todoLists, onClickList, displayFilter } = this.props;
 
-    let renderFilter = (todoList) => {
+    let switchFilter = (todoList) => {
       switch (displayFilter) {
         case 'all':
           return true;

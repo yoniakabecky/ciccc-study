@@ -2,7 +2,7 @@ import React from "react";
 
 import AddTodo from "./component/AddTodo";
 import PrintTodo from "./component/PrintTodo";
-import SortTodo from "./component/SortTodo";
+import FilterTodo from "./component/FilterTodo";
 import "./App.css";
 
 class App extends React.Component {
@@ -46,7 +46,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <AddTodo handleInputValue={this.addNewTask} />
-        <SortTodo displayFilter={this.setFilter} />
+        <FilterTodo displayFilter={this.setFilter} />
         <PrintTodo todoLists={this.state.todoList} displayFilter={this.state.filterType} onClickList={this.onClickList} />
       </div>
     );
